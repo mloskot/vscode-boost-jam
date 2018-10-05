@@ -1,0 +1,27 @@
+{
+    "name": "vscode-boost-jam",
+    "displayName": "vscode-boost-jam",
+    "description": "Syntax highlighting for Boost.Jam language in Visual Studio Code",
+    "version": "0.0.1",
+    "publisher": "mloskot",
+    "engines": {
+        "vscode": "^1.27.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "bjam",
+            "aliases": ["Boost.Jam", "bjam"],
+            "extensions": [".jam"],
+            "filenames": ["Jamfile","Jamfile.v2","Jamroot"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "bjam",
+            "scopeName": "source.bjam",
+            "path": "./syntaxes/bjam.tmLanguage.json"
+        }]
+    }
+}
