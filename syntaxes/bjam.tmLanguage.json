@@ -1,131 +1,29 @@
 {
-    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
     "information_for_contributors": [
-        "This file has been manually converted from https://github.com/prenaux/atom-language-ham/blob/master/grammars/ham.cson",
-        "If you want to provide a fix or improvement, please create a pull request against this original repository.",
-        "Please consider also submitting the fix to the original repository."
+        "TODO"
     ],
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
     "name": "Boost.Jam",
     "scopeName": "source.bjam",
     "patterns": [
         {
-            "include": "#statement"
-        },
-        {
-          "captures": {
-            "1": {
-              "name": "variable"
-            }
-          },
-          "match": "\\$\\(([a-zA-Z0-9_<>]*)\\)",
-          "name": "other.dollar_variable"
-        },
-        {
-          "captures": {
-            "1": {
-              "name": "entity.name.function"
-            }
-          },
-          "match": "\\[\\s([a-zA-Z0-9_]*)",
-          "name": "other.func_call"
-        },
-        {
-          "match": "\\b(bind|BIND|case|default|else|existing|EXISTING|for|if|ignore|in|include|on|piecemeal|PIECEMEAL|quietly|QUIETLY|switch|together|TOGETHER|updated|UPDATED|return)\\b",
-          "name": "keyword.control.bjam"
-        },
-        {
-          "match": "\\b(class|local|rule|actions)\\b",
-          "name": "storage.type.bjam"
-        },
-        {
-          "match": "!|%|&|\\*|\\-\\-|\\-|\\+\\+|\\+|==|=|!=|<=>|<=|>=|<-|>>>|<<|>>|<|>|!|&&|\\|\\||\\?\\:|\\*=|(?<!\\()/=|%=|\\+=|\\-=|&=|%=|\\b(in|instanceof|typeof)\\b",
-          "name": "keyword.operator.bjam"
-        },
-        {
-          "match": "\\;",
-          "name": "punctuation.terminator.statement.bjam"
-        },
-        {
-          "match": "\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b",
-          "name": "constant.numeric.bjam"
-        },
-        {
-          "begin": "\"",
-          "beginCaptures": {
-            "0": {
-              "name": "punctuation.definition.string.begin.bjam"
-            }
-          },
-          "end": "\"",
-          "endCaptures": {
-            "0": {
-              "name": "punctuation.definition.string.end.bjam"
-            }
-          },
-          "name": "string.quoted.double.bjam",
-          "patterns": [
-            {
-              "match": "\\\\.",
-              "name": "constant.character.escape.bjam"
-            }
-          ]
-        },
-        {
-          "captures": {
-            "1": {
-              "name": "punctuation.definition.comment.bjam"
-            }
-          },
-          "match": "(#).*$\\n?",
-          "name": "comment.line.double-slash.bjam"
-        },
-        {
-          "match": "\\{|\\}",
-          "name": "meta.brace.curly.bjam"
-        },
-        {
-          "match": "\\(|\\)",
-          "name": "meta.brace.round.bjam"
-        },
-        {
-          "match": "\\[|\\]",
-          "name": "meta.brace.square.bjam"
-        },
-        {
-          "captures": {
-            "1": {
-              "name": "support.constant"
-            }
-          },
-          "match": "\\b(?i:(EXIT|ALWAYS|DEPENDS|ECHO|INCLUDES|LEAVES|LOCATE|NOCARE|NOTFILE|NOUPDATE|SEARCH|TEMPORARY|TOP))\\b",
-          "name": "other.builtins"
-        },
-        {
-          "captures": {
-            "1": {
-              "name": "support.function"
-            }
-          },
-          "match": "\\b(SubInclude|SubDir)\\b",
-          "name": "other.other_buildins"
+            "include": "#comments"
         }
-      ],
-      "repository": {
-        "statement": {
+    ],
+    "repository": {
+		"comments": {
             "patterns": [
                 {
-                    "include": "#import"
-                }
-            ]
-        },
-        "import": {
-            "comment": "Import statements\n",
-            "patterns": [
-                {
-                    "name": "keyword.control.import.bjam",
-                    "match": "\\b(?<!\\.)import\\b"
+                    "begin": "^(#)",
+                    "captures": {
+                        "1": {
+                            "name": "punctuation.definition.comment.bjam"
+                        }
+                    },
+                    "end": "\\n",
+                    "name": "comment.line.number-sign.bjam"
                 }
             ]
         }
-      }
+    }
 }
