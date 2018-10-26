@@ -75,19 +75,19 @@
         },
         {
             "name": "keyword.other.builtin.rule.bjam",
-            "match": "\\b(alias|exe|obj|lib|(use|build\\-)?project|test\\-suite|ALWAYS|BACKTRACE|DEPENDS|ECHO|EXIT|FAIL_EXPECTED|FILE_OPEN|GLOB(?:_ARCHIVE)?|INCLUDES|ISFILE|LEAVES|MATCH|MD5|NOCARE|NOTFILE|NOUPDATE|PAD|PRECIOUS|RMOLD|SHELL|SPLIT(?:_[A-Z_]+)?|TEMPORARY|UPDATE(_NOW)?)\\b"
+            "match": "\\b(alias|exe|obj|lib|(?:(?:use|build)\\-)?project|test\\-suite|ALWAYS|BACKTRACE|DEPENDS|ECHO|EXIT|FAIL_EXPECTED|FILE_OPEN|GLOB(?:_ARCHIVE)?|INCLUDES|ISFILE|LEAVES|MATCH|MD5|NOCARE|NOTFILE|NOUPDATE|PAD|PRECIOUS|RMOLD|SHELL|SPLIT(?:_[A-Z_]+)?|TEMPORARY|UPDATE(_NOW)?)\\b"
         },
         {
             "name": "keyword.control.bjam",
-            "match": "\\b(actions|break|case|continue|default|else|for|if|import|(?<!\\>)on|return|switch|while)\\b"
+            "match": "\\b(actions|break|case|continue|default(\\-build)?|else|for|if|import|(?<!\\>)on|return|switch|while)\\b"
         },
         {
             "name": "constant.language.bjam",
-            "match": "\\b(clang|darwin|debug|dynamic|gcc|intel|msvc|multi|(?<=\\>)on|release|single|shared|static|stlport|EXE|LIB|OBJ|IMPORT_LIB|SHARED_LIB|STATIC_LIB)\\b"
+            "match": "\\b(clang|darwin|debug|dynamic|gcc|intel|msvc|multi|no|(?<=\\>)on|release|single|shared|static|stlport|EXE|LIB|OBJ|IMPORT_LIB|SHARED_LIB|STATIC_LIB)\\b"
         },
         {
             "name": "storage.type.variable.bjam",
-            "match": "\\b(constant|default|local)\\b"
+            "match": "\\b((path\\-)?constant|default|local)\\b"
         },
         {
             "match": "\\b(false|true)\\b",
