@@ -7,10 +7,23 @@
     "author": {
         "name": "Mateusz Łoskot"
     },
+    "license": "SEE LICENSE IN LICENSE.txt",
     "repository": {
         "type": "git",
         "url": "https://github.com/mloskot/vscode-boost-jam.git"
     },
+    "bugs": {
+        "url": "https://github.com/mloskot/vscode-boost-jam.git",
+        "email": "mateusz@loskot.net"
+    },
+    "homepage": "https://github.com/mloskot/vscode-boost-jam/blob/master/README.md",
+    "keywords": [
+        "jam",
+        "jamfile",
+        "boost.jam",
+        "boost.build",
+        "boost"
+    ],
     "engines": {
         "vscode": "^1.27.0"
     },

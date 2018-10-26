@@ -15,11 +15,10 @@ Boost.Build is developed as part of [Boost](https://boost.org) project.
 
 ## Acknowledgements
 
-- [Matt Neuburg](https://github.com/mattneub) for his [Writing a TextMate Grammar: Some Lessons Learned](http://www.apeth.com/nonblog/stories/textmatebundle.html)
-- [Michael Lovitt](http://www.lovitt.net) for [Rubular](http://www.rubular.com/)
-- [Rene Rivera]() for converting Boost.Build docs to AsciiDoc
-- Boost.Build developers for the excellent build system.
-
+- [Matt Neuburg](https://github.com/mattneub) for his [Writing a TextMate Grammar: Some Lessons Learned](http://www.apeth.com/nonblog/stories/textmatebundle.html).
+- [Michael Lovitt](http://www.lovitt.net) for [Rubular](http://www.rubular.com/).
+- [Rene Rivera](https://github.com/grafikrobot/) for converting Boost.Build docs to AsciiDoc.
+- [Boost.Build developers](https://github.com/boostorg/build) for the excellent build system.
 
 ## Contributors
 
@@ -29,6 +28,8 @@ The file was written from scratch and not converted from any existing TextMate g
 
 If you want to provide a fix or improvement, awesome!
 Please improve the file adh create a pull request against this git repository.
+
+All contributions are welcome!
 
 ## License
 
