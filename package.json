@@ -1,9 +1,16 @@
 {
     "name": "vscode-boost-jam",
-    "displayName": "vscode-boost-jam",
+    "displayName": "Boost.Jam",
     "description": "Syntax highlighting for Boost.Jam language in Visual Studio Code",
     "version": "0.0.1",
     "publisher": "mloskot",
+    "author": {
+        "name": "Mateusz Łoskot"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mloskot/vscode-boost-jam.git"
+    },
     "engines": {
         "vscode": "^1.27.0"
     },
@@ -11,17 +18,30 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "bjam",
-            "aliases": ["Boost.Jam", "bjam"],
-            "extensions": [".jam"],
-            "filenames": ["Jamfile","Jamfile.v2","Jamroot"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "bjam",
-            "scopeName": "source.bjam",
-            "path": "./syntaxes/bjam.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "bjam",
+                "aliases": [
+                    "Boost.Jam",
+                    "bjam"
+                ],
+                "extensions": [
+                    ".jam"
+                ],
+                "filenames": [
+                    "Jamfile",
+                    "Jamfile.v2",
+                    "Jamroot"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "bjam",
+                "scopeName": "source.bjam",
+                "path": "./syntaxes/bjam.tmLanguage.json"
+            }
+        ]
     }
 }
