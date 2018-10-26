@@ -44,6 +44,17 @@ Please improve the file and create a pull request against this git repository.
 
 All contributions are welcome!
 
+### Testing
+
+There are no automated tests provided.
+There is just `test/colorize-fixtures/test.jam` file provided,
+but without company of `test/colorize-results/test_jam.json` file.
+In fact, I have no idea how such tests should be implemented.
+
+Instead, install the extension and open `test/colorize-fixtures/test.jam` file.
+Look what you see and compare it with what you would prefer to see.
+Then, hopefully, happy hacking in attempt to correct the language grammar :-)
+
 ## License
 
 [MIT](https://github.com/twxs/vs.language.cmake/blob/master/LICENSE)
