@@ -9,7 +9,8 @@ First line of block comment.
 This is second line.
 |#
 
-import path ;
+import testing
+import project ;
 import path : * ;
 import path : join ;
 import path : native make : native-path make-path ;
@@ -195,3 +196,5 @@ project boost-test
       <toolset>clang,<variant>release:<cxxflags>-std=c++11
     ;
 
+build-project full-test ;
+test-suite simple ;
