@@ -1,12 +1,13 @@
-# vscode-boost-jam README
+# vscode-boost-jam
 
 This extension provides support for [Boost.Jam](http://boost.org/build/)
 language in Visual Studio Code.
 
 Boost.Jam is an interpreted language implemented by [Boost.Build](http://boost.org/build/)
 engine, `b2`, which loads the Jam code that implements the build system.
-
 Boost.Build is developed as part of [Boost](https://boost.org) project.
+
+![screenshot](images/screenshot.png)
 
 ## Features
 
