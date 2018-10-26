@@ -17,14 +17,96 @@
             "end": "\\n"
         },
         {
-            "comment": "import statements",
-            "match": "\\b(import)\\s.+\\s(;)",
+            "comment": "class definition, captures names of base class and optional derived class",
+            "match": "\\b(class)\\s+([a-zA-Z_][a-zA-Z0-9_\\-]*)(?:\\s+\\:\\s+([a-zA-Z_][a-zA-Z0-9_\\-]*))?",
             "captures": {
                 "1": {
-                    "name": "keyword.import.bjam"
+                    "name": "storage.type.class.bjam"
                 },
                 "2": {
-                    "name": "punctuation.terminator.bjam"
+                    "name": "entity.name.type.class.bjam"
+                },
+                "3": {
+                    "name": "storage.type.class.bjam"
+                }
+            }
+        },
+        {
+            "name": "meta.rule.bjam",
+            "comment": "rule definition, captures name of rule",
+            "begin": "\\b(rule)\\s+([a-zA-Z_][a-zA-Z0-9_\\-]*)\\s+(?:[\\(\\{\\s])?",
+            "beginCaptures": {
+                "1": {
+                    "name": "storage.type.rule.bjam"
+                },
+                "2": {
+                    "name": "entity.name.function.rule.bjam"
+                }
+            },
+            "end": "\\)|\\}",
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.definition.parameters.end.bjam"
+                }
+            },
+            "patterns": [
+                {
+                    "match": "[a-zA-Z_][a-zA-Z0-9_\\-]*",
+                    "name": "variable.parameter.function.rule.bjam"
+                },
+                {
+                    "match": "(?:\\s(\\?|\\*|\\+)\\s)",
+                    "name": "keyword.operator.parameter.modifier.bjam"
+                },
+                {
+                    "match": ":",
+                    "name": "punctuation.separator.arguments.bjam"
+                }
+            ]
+        },
+        {
+            "name": "keyword.other.builtin.rule.bjam",
+            "match": "\\b(alias|exe|obj|lib|(?:use\\-)?project|ALWAYS|BACKTRACE|DEPENDS|ECHO|EXIT|FAIL_EXPECTED|FILE_OPEN|GLOB(?:_ARCHIVE)?|INCLUDES|ISFILE|LEAVES|MATCH|MD5|NOCARE|NOTFILE|NOUPDATE|PAD|PRECIOUS|RMOLD|SHELL|SPLIT(?:_[A-Z_]+)?|TEMPORARY|UPDATE(?:_NOW)?)\\b"
+        },
+        {
+            "name": "storage.type.variable.bjam",
+            "match": "\\b(constant|default|local)\\b"
+        },
+        {
+            "name": "constant.language.bjam",
+            "match": "((?:\\s(?:false|true)\\s)|(?:(?<=\\>)(?:multi|on|single|static)))"
+        },
+        {
+            "name": "keyword.control.bjam",
+            "match": "\\b(actions|break|case|continue|default|else|for|if|import|on|return|switch|while)\\b"
+        },
+        {
+            "name": "entity.other.attribute-name",
+            "match": "(\\<[a-z_\\-]+\\>)"
+        },
+        {
+            "comment": "Illegal : or ; token is visually highlighted for missing whitespace around with keyword.* class",
+            "match": "((?:\\S(?:;|:))|(?:(?:\\:)\\S))",
+            "captures": {
+                "1": {
+                    "name": "keyword.other.illegal-token.bjam"
+                }
+            }
+        },
+        {
+            "name": "punctuation.terminator.bjam",
+            "match": ";"
+        },
+        {
+            "name": "keyword.operator.bjam",
+            "match": "(?:\\s(\\*|\\=|\\!=|\\+=?|\\?=?|<=?|>=?|(?<!\\.)\\.{2}(?!\\.)|in|&&|\\|\\|)|\\!)\\s"
+        },
+        {
+            "comment": "Symbol && separates property values and specify that their order should be preserved.",
+            "match": "(?:\\S)(&&)(?:\\S)",
+            "captures": {
+                "1": {
+                    "name": "keyword.operator.property.separator.bjam"
                 }
             }
         }

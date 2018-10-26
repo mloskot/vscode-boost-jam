@@ -1,9 +1,210 @@
+################################################################################
+# Comments
+
 # Single line comment.
 # Another single line comment.
 
-#| First line of block comment.
+#|
+First line of block comment.
 This is second line.
-
 |#
 
-import os ;
+import path ;
+import path : * ;
+import path : join ;
+import path : native make : native-path make-path ;
+
+################################################################################
+# Variables
+#
+constant VERSION : 1.34.0 ;
+constant VERSION : 1.34.0 ;
+constant VERSION : 1.34.0 ;
+
+constant VERSION : 1.34.0 ;
+constant VERSION : 1.34.0;
+constant VERSION: 1.34.0 ;
+constant VERSION :1.34.0 ;
+
+# Set or append to global variable
+variable = elements ;
+variable += elements ;
+;
+local v = false ;
+local v = true ;
+local v = false ;
+
+
+# Set global variable, but only if it was previously unset.
+variable default = elements ;
+variable ?= elements ;
+
+# Set or append to local variable
+local variable = elements ;
+
+# Set or append to target-specific variable
+variable on targets = elements ;
+variable on targets += elements ;
+
+################################################################################
+# Flow control
+
+if (! a) {}
+if ( ! a) {}
+if (a && b) {}
+if (a || b) {}
+
+if a in b } { statements }
+else { statements }
+
+a = b
+a != b
+a < b
+a <= b
+a > b
+a >= b
+a in b
+! a in b
+( a <= b ) && ( b >= c )
+( a <= b ) || ( b >= c )
+
+return values ;
+
+switch value
+{
+    case pattern1 : statements ;
+    case pattern2 : statements ;
+}
+
+for var in list { statements }
+
+while cond { statements }
+
+break ;
+
+continue ;
+
+################################################################################
+# Rules
+
+# Define a rule's procedure
+rule rulename { statements }
+
+rule rulename {
+  statements
+}
+
+  rule rulename ( parameter1 ) {
+    statements
+  }
+
+rule rulename ( parameter1 : parameter2 ? : parameter3 + )
+{
+  statements
+}
+
+rule example
+(
+    parameter1 :
+    parameter2 ? :
+    parameter3 + :
+    parameter4 *
+)
+{
+  # rule body
+  local v ;
+}
+
+rule report ( pronoun index ? : state : names + )
+{
+    local he.suffix she.suffix it.suffix = s ;
+    local I.suffix = m ;
+    local they.suffix you.suffix = re ;
+    ECHO $(pronoun)'$($(pronoun).suffix) $(state), $(names[$(index)]) ;
+}
+
+################################################################################
+# Classes
+
+class abstract-target {
+    rule __init__ ( name : project )
+    rule name ( )
+    rule project ( )
+    rule location ( )
+    rule full-name ( )
+    rule generate ( property-set )
+}
+
+class main-target : abstract-target {
+    rule generate ( property-set )
+
+    # Methods inherited from abstract-target
+    rule name ( )
+    rule project ( )
+    rule location ( )
+    rule full-name ( )
+}
+
+
+################################################################################
+# Rule invocations
+
+rulename field1 : field2 : ... : fieldN ;
+
+# Define a rule's updating actions
+actions [ modifiers ] rulename { commands }
+
+# Invoke a rule under the influence of target's specific variables.
+on target rulename field1 : field2 : ... : fieldN ;
+
+# Used as an argument, expands to the return value of the rule invoked.
+[ rulename field1 : field2 :  fieldN ]
+[ on target rulename field1 : field2 : fieldN ]
+
+exe a : a.cpp : <include>b <include>a ;
+exe a
+  # Requirements
+  : a.cpp
+  :
+    <include>b
+    <include>a
+  ;
+exe a : a.cpp : <include>a&&b ;
+
+exe test2 : test2.cpp : <threading>single ;
+exe test3 : test3.cpp : -<threading>multi ;
+
+lib a : a.cpp : <include>a ;
+
+DEPENDS
+  foo.o : foo.c
+  ;
+INCLUDES foo.c : foo.h ;
+
+local x = [ GLOB_ARCHIVE foo ] ;
+
+use-project /library-example/foo : util/foo ;
+
+alias foo : /other_project//bar/<link>static ;
+
+lib network : network.cpp
+    : <link>shared:<define>NETWORK_LIB_SHARED
+     <variant>release:<define>EXTRA_FAST
+    ;
+
+project boost-test
+    :
+    requirements
+      # MSVC: Since VS2017, default is -std:c++14, so no explicit switch is required.
+      <toolset>msvc:<asynch-exceptions>on
+      <toolset>msvc:<cxxflags>/W4
+      <toolset>msvc:<define>_SCL_SECURE_NO_DEPRECATE <define>NOMINMAX
+      <toolset>intel:<debug-symbols>off
+      # GCC
+      <toolset>gcc:<cxxflags>"-std=c++11 -pedantic"
+      # clang
+      <toolset>clang,<variant>debug:<cxxflags>"-std=c++11 -fstrict-aliasing"
+      <toolset>clang,<variant>release:<cxxflags>-std=c++11
+    ;
+
+alias ss
