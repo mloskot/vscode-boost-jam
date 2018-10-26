@@ -21,6 +21,11 @@ bugs or covers all elements of Boost.Jam language. Non-trivial TextMate
 grammars for Visual Studio Code count from 500 to 5000 lines of code,
 and this one *less than 200*.
 
+## Installation
+
+- Visual Studio Code > Extensions (CTRL+SHIFT+X)
+- https://marketplace.visualstudio.com/items?itemName=mloskot.vscode-boost-jam
+
 ## Acknowledgements
 
 - [Matt Neuburg](https://github.com/mattneub) for his [Writing a TextMate Grammar: Some Lessons Learned](http://www.apeth.com/nonblog/stories/textmatebundle.html).
