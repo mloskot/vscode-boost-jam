@@ -171,7 +171,7 @@ local x = [ GLOB_ARCHIVE foo ] ;
 
 use-project /library-example/foo : util/foo ;
 
-alias foo : /other_project//bar/<link>static ;
+alias foo : /other_project/lib//bar/<link>static ;
 
 lib network : network.cpp
     : <link>shared:<define>NETWORK_LIB_SHARED

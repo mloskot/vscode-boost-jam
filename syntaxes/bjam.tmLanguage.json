@@ -1,10 +1,17 @@
 {
     "information_for_contributors": [
-        "TODO"
+        "This file was written from scratch by Mateusz Loskot <mateusz@loskot.net>.",
+        "The extension is developed at https://github.com/mloskot/vscode-boost-jam",
+        "If you want to provide a fix or improvement, awesome!",
+        "Please create a pull request against the git repository at GitHub."
     ],
+    "version": "0.0.1",
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
     "name": "Boost.Jam",
     "scopeName": "source.bjam",
+    "fileTypes": [
+        "jam"
+    ],
     "patterns": [
         {
             "name": "comment.block.bjam",
@@ -27,7 +34,7 @@
                     "name": "entity.name.type.class.bjam"
                 },
                 "3": {
-                    "name": "storage.type.class.bjam"
+                    "name": "entity.name.type.class.bjam"
                 }
             }
         },
@@ -70,11 +77,11 @@
         },
         {
             "name": "keyword.control.bjam",
-            "match": "\\s?(actions|break|case|continue|default|else|for|if|import|on|return|switch|while)\\s"
+            "match": "\\b(actions|break|case|continue|default|else|for|if|import|(?<!\\>)on|return|switch|while)\\b"
         },
         {
             "name": "constant.language.bjam",
-            "match": "\\b(clang|darwin|debug|dynamic|gcc|intel|msvc|multi|(?<=\\>)on|release|single|shared|static|stlport)\\b"
+            "match": "\\b(clang|darwin|debug|dynamic|gcc|intel|msvc|multi|(?<=\\>)on|release|single|shared|static|stlport|EXE|LIB|OBJ|IMPORT_LIB|SHARED_LIB|STATIC_LIB)\\b"
         },
         {
             "name": "storage.type.variable.bjam",
