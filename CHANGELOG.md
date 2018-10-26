@@ -5,7 +5,7 @@ All notable changes to the "vscode-boost-jam" extension will be documented in th
 ## 0.0.1 - 2018-10-26
 
 - Initial release of [vscode-boost-jam](https://github.com/mloskot/vscode-boost-jam).
-- First stab at usable syntax highlighting for Boost.Jam in Visual Studio Code.
+- First stab at fairly usable syntax highlighting for Boost.Jam in Visual Studio Code.
 
 ### Added
 
