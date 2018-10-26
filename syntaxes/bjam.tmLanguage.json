@@ -1,7 +1,9 @@
 {
     "information_for_contributors": [
-        "This file was written from scratch by Mateusz Loskot <mateusz@loskot.net>.",
-        "The extension is developed at https://github.com/mloskot/vscode-boost-jam",
+        "This file is part of Visual Studio Code language extension for Boost.Jam - http://boost.org/build/",
+        "This file contains language grammar for Boost.Jam syntax highlighting.",
+        "Thus file was written from scratch by Mateusz Loskot <mateusz@loskot.net>.",
+        "The extension is developed at https://github.com/mloskot/vscode-boost-jam.",
         "If you want to provide a fix or improvement, awesome!",
         "Please create a pull request against the git repository at GitHub."
     ],
