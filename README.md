@@ -51,9 +51,19 @@ There is just `test/colorize-fixtures/test.jam` file provided,
 but without company of `test/colorize-results/test_jam.json` file.
 In fact, I have no idea how such tests should be implemented.
 
-Instead, install the extension and open `test/colorize-fixtures/test.jam` file.
+Instead, install or run the extension and open `test/colorize-fixtures/test.jam` file.
 Look what you see and compare it with what you would prefer to see.
 Then, hopefully, happy hacking in attempt to correct the language grammar :-)
+
+[Running and debugging your extension](https://code.visualstudio.com/docs/extensions/developing-extensions)
+explains in details how to run the extension for convenient development and testing. In short:
+
+1. Open `vscode-boost-jam` folder in VSCode and hit F5 to start debugging.
+2. In the new window with the extension loaded, open the `test.jam` or your own Jam file.
+3. Edit the grammar file in the parent window.
+4. Reload the debugging window with CTRL+R
+5. Observe result, modify the `test.jam`.
+6. Iterate over steps from 3 to 5
 
 ## License
 
