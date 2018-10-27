@@ -75,7 +75,7 @@
         },
         {
             "name": "keyword.other.builtin.rule.bjam",
-            "match": "\\b(alias|exe|obj|lib|(?:(?:use|build)\\-)?project|test\\-suite|ALWAYS|BACKTRACE|DEPENDS|ECHO|EXIT|FAIL_EXPECTED|FILE_OPEN|GLOB(?:_ARCHIVE)?|INCLUDES|ISFILE|LEAVES|MATCH|MD5|NOCARE|NOTFILE|NOUPDATE|PAD|PRECIOUS|RMOLD|SHELL|SPLIT(?:_[A-Z_]+)?|TEMPORARY|UPDATE(_NOW)?)\\b"
+            "match": "\\b(alias|exe|obj|lib|(?:(?:use|build)\\-)?project|test\\-suite|variant|ALWAYS|BACKTRACE|DEPENDS|ECHO|EXIT|FAIL_EXPECTED|FILE_OPEN|GLOB(?:_ARCHIVE)?|INCLUDES|ISFILE|LEAVES|MATCH|MD5|NOCARE|NOTFILE|NOUPDATE|PAD|PRECIOUS|RMOLD|SHELL|SPLIT(?:_[A-Z_]+)?|TEMPORARY|UPDATE(_NOW)?)\\b"
         },
         {
             "name": "keyword.control.bjam",

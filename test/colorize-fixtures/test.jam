@@ -172,14 +172,21 @@ local x = [ GLOB_ARCHIVE foo ] ;
 
 use-project /library-example/foo : util/foo ;
 
-alias foo : /other_project/lib//bar/<link>static ;
+alias threads : /boost/thread//boost_thread : <link>static ;
 
 lib network : network.cpp
     : <link>shared:<define>NETWORK_LIB_SHARED
      <variant>release:<define>EXTRA_FAST
     ;
 
-alias threads : /boost/thread//boost_thread : <link>static ;
+variant ubsan_integer
+    : release
+    :
+    <cxxflags>"-std=c++11 -Wno-unused -fstrict-aliasing -fno-omit-frame-pointer -fsanitize=integer -fno-sanitize-recover=integer -fsanitize-blacklist=libs/gil/.ci/blacklist.supp"
+    <linkflags>"-fsanitize=integer"
+    <debug-symbols>on
+    <define>BOOST_USE_ASAN=1
+    ;
 
 project boost-test
     :
