@@ -2,6 +2,10 @@
 
 All notable changes to the "vscode-boost-jam" extension will be documented in this file.
 
+## 0.0.2 - 2019-08-02
+
+- Recognize `variant` as built-in rule
+
 ## 0.0.1 - 2018-10-26
 
 - Initial release of [vscode-boost-jam](https://github.com/mloskot/vscode-boost-jam).
