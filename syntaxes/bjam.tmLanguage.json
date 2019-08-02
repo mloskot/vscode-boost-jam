@@ -7,7 +7,7 @@
         "If you want to provide a fix or improvement, awesome!",
         "Please create a pull request against the git repository at GitHub."
     ],
-    "version": "0.0.1",
+    "version": "0.0.2",
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
     "name": "Boost.Jam",
     "scopeName": "source.bjam",
