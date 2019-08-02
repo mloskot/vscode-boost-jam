@@ -35,11 +35,13 @@ and this one *less than 200*.
 
 ## Contributors
 
+
 The main part of the extension is the `bjam.tmLanguage.json` file.
 This file contains language grammar for [Boost.Jam](http://boost.org/build/) syntax highlighting.
 The file was written from scratch and not converted from any existing TextMate grammar.
 
-If you want to provide a fix or improvement, awesome!
+**If you want to offer a fix or improvement, awesome!**
+
 Please improve the file and create a pull request against this git repository.
 
 All contributions are welcome!
@@ -59,9 +61,9 @@ Then, hopefully, happy hacking in attempt to correct the language grammar :-)
 explains in details how to run the extension for convenient development and testing. In short:
 
 1. Open `vscode-boost-jam` folder in VSCode and hit F5 to start debugging.
-2. In the new window with the extension loaded, open the `test.jam` or your own Jam file.
+2. New (preview) window appears with the extension loaded, in it, open the `test.jam` or your own Jamfile.
 3. Edit the grammar file in the parent window.
-4. Reload the debugging window with CTRL+R
+4. Reload the debugging (preview) window with CTRL+R
 5. Observe result, modify the `test.jam`.
 6. Iterate over steps from 3 to 5
 
