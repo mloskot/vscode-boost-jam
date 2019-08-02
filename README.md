@@ -33,8 +33,7 @@ and this one *less than 200*.
 - [Rene Rivera](https://github.com/grafikrobot/) for converting Boost.Build docs to AsciiDoc.
 - [Boost.Build developers](https://github.com/boostorg/build) for the excellent build system.
 
-## Contributors
-
+## Development
 
 The main part of the extension is the `bjam.tmLanguage.json` file.
 This file contains language grammar for [Boost.Jam](http://boost.org/build/) syntax highlighting.
@@ -66,6 +65,14 @@ explains in details how to run the extension for convenient development and test
 4. Reload the debugging (preview) window with CTRL+R
 5. Observe result, modify the `test.jam`.
 6. Iterate over steps from 3 to 5
+
+### Publishing
+
+(*by original author*)
+
+Follow the official guide on
+[Publishing Extension(https://code.visualstudio.com/api/working-with-extensions/publishing-extension)
+to VS Code Extension Marketplace.
 
 ## License
 
